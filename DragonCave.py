@@ -72,7 +72,25 @@ class DragonCaveGame:
                 time.sleep(1)
 #Perulangan while
 
-#fase naganya 
+# Dragon Phase
+                    if self.player.get_hp() > 0:
+                        dragon_chance = random.randint(0, 100)
+                        if dragon_chance > 18:
+                            dragon_damage = random.randint(8, 45)
+                            self.player.set_hp(self.player.get_hp() - dragon_damage)
+                            print("Naga itu menyerangmu, menyisakanmu", self.player.get_hp(), "HP")
+                        else:
+                            print("BERUNTUNG SEKALI! Naga itu meleset")
+
+                if self.player.get_hp() <= 0:
+                    print("SIAL, kau telah dikalahkan oleh sang Gua Naga")
+                    if self.naga.get_hp() < 300:
+                        print("Padahal kamu hampir mengalahkannya")
+                    time.sleep(1)
+                    print("GAME OVER")
+
+                if self.naga.get_hp() <= 0:
+                    print("SELAMAT, kau mengalahkan si naga dan mendapat harta si naga jahat")
 print("Selamat datang ke tugas kelompok 01 yang beranggota:")
 print("Farrel Razaan Rabbani 21120123140108")
 print("Maulana Yusuf Muhammad 21120123140166")
