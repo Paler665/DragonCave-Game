@@ -39,7 +39,7 @@ class Character:
 
 #fase naganya 
 print("Selamat datang ke tugas kelompok 01 yang beranggota:")
-print("")
+print("Farrel Razaan Rabbani 21120123140108")
 print("")
 print("")
 print("")
