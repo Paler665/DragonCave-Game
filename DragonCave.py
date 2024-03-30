@@ -71,6 +71,17 @@ class DragonCaveGame:
                 print("Sepertinya pedang yang kamu bawa berguna juga")
                 time.sleep(1)
 #Perulangan while
+        
+           while self.naga.get_hp() > 0 and self.player.get_hp() > 0:
+                    print("GUA NAGA:", self.naga.get_hp())
+                    print("Kau memiliki HP:", self.player.get_hp(), "dan jumlah potion", self.player.get_potion())
+
+                    battle = int(input("1.Serang 2.Minum potion"))
+                    if battle == 1:
+                        self.naga.set_hp(self.naga.get_hp() - self.player.attack())
+                    elif battle == 2:
+                        if not self.player.drink_potion():
+                            continue
 
 # Dragon Phase
                     if self.player.get_hp() > 0:
