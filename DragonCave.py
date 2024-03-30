@@ -75,8 +75,8 @@ class DragonCaveGame:
 #fase naganya 
 print("Selamat datang ke tugas kelompok 01 yang beranggota:")
 print("Farrel Razaan Rabbani 21120123140108")
-print("")
-print("")
-print("")
+print("Maulana Yusuf Muhammad 21120123140166")
+print("Aufa Ika Pramesti 21120123140139")
+print("Ananda Dwiki Bayu Widiatama 21120123120026")
 game = DragonCaveGame()
 game.play()
